@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Check Disk Usage",
+    "command": "df -h",
+    "description": "Show disk usage"
+  },
+  {
+    "id": 2,
+    "name": "Check Memory",
+    "command": "free -h",
+    "description": "Show memory usage"
+  }
+]
