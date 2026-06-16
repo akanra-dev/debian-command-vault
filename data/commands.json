@@ -3,12 +3,245 @@
     "id": 1,
     "name": "Check Disk Usage",
     "command": "df -h",
-    "description": "Show disk usage"
+    "description": "Show disk usage",
+    "category": "debian"
   },
   {
     "id": 2,
     "name": "Check Memory",
     "command": "free -h",
-    "description": "Show memory usage"
+    "description": "Show memory usage",
+    "category": "debian"
+  },
+  {
+    "id": 3,
+    "name": "Update Packages",
+    "command": "sudo apt update",
+    "description": "Update package list",
+    "category": "debian"
+  },
+  {
+    "id": 4,
+    "name": "Save File",
+    "command" : ":w",
+    "description": "Save current file",
+    "category": "vim"
+  },
+  {
+    "id": 5,
+    "name": "Quit Vim",
+    "command": ":q",
+    "description": "Quit Vim",
+    "category": "vim"
+  },
+  {
+    "id": 6,
+    "name": "Split Container",
+    "command": "$mod+v",
+    "description": "Vertical split",
+    "category": "i3wm"
+  },
+  {
+    "id": 7,
+    "name": "List Files",
+    "command": "ls -lah",
+    "description": "List files with details",
+    "category": "debian"
+  },
+  {
+    "id": 8,
+    "name": "Disk Usage",
+    "command": "du -sh",
+    "description": "Show folder sizes",
+    "category": "debian"
+  },
+  {
+    "id": 9,
+    "name": "Check Block Devices",
+    "command": "lsblk",
+    "description": "List disk and partitions",
+    "category": "debian"
+  },
+  {
+    "id": 10,
+    "name": "Check Services",
+    "command": "systemctl --type=service",
+    "description": "List services",
+    "category": "debian"
+  },
+  {
+    "id": 11,
+    "name": "System Logs",
+    "command": "journalctl -xe",
+    "description": "View recent logs",
+    "category": "debian"
+  },
+  {
+    "id": 12,
+    "name": "Show IP Address",
+    "command": "ip a",
+    "description": "Display network interfaces",
+    "category": "networking"
+  },
+  {
+    "id": 13,
+    "name": "Show Routes",
+    "command": "ip route",
+    "description": "Display routing table",
+    "category": "networking"
+  },
+  {
+    "id": 14,
+    "name": "Ping Google",
+    "command": "ping 8.8.8.8",
+    "description": "Test connectivity",
+    "category": "networking"
+  },
+  {
+    "id": 15,
+    "name": "Check Open Ports",
+    "command": "ss -tulpn",
+    "description": "List listening ports",
+    "category": "networking"
+  },
+  {
+    "id": 16,
+    "name": "Download URL",
+    "command": "curl URL",
+    "description": "Fetch content",
+    "category": "networking"
+  },
+  {
+    "id": 17,
+    "name": "Save and Quit",
+    "command": ":wq",
+    "description": "Save and exit",
+    "category": "vim"
+  },
+  {
+    "id": 18,
+    "name":"Force Quit",
+    "command": ":q!",
+    "description": "Exit without saving",
+    "category": "vim"
+  },
+  {
+    "id": 19,
+    "name": "Delete Line",
+    "command": "dd",
+    "description": "Delete current line",
+    "category": "vim"
+  },
+  {
+    "id": 20,
+    "name": "Copy Line",
+    "command": "yy",
+    "description": "Yank current line",
+    "category": "vim"
+  },
+  {
+    "id": 21,
+    "name": "Paste",
+    "command": "p",
+    "description": "Paste text",
+    "category": "vim"
+  },
+  {
+    "id": 22,
+    "name": "Open Terminal",
+    "command": "$mod+Enter",
+    "description": "Open terminal",
+    "category": "i3wm"
+  },
+  {
+    "id": 23,
+    "name": "Application Launcher",
+    "command": "$mod+d",
+    "description": "Launch dmenu",
+    "category": "i3wm"
+  },
+  {
+    "id": 24,
+    "name": "Close Window",
+    "command": "$mod+Shift+q",
+    "description": "Close focused window",
+    "category": "i3wm"
+  },
+  {
+    "id": 25,
+    "name": "Reload config",
+    "command": "$mod+Shift+r",
+    "description": "Reload i3 config",
+    "category": "i3wm"
+  },
+  {
+    "id": 26,
+    "name": "Git Status",
+    "command": "git status",
+    "description": "Show repository status",
+    "category": "git"
+  },
+  {
+    "id": 27,
+    "name": "Add all files",
+    "command": "git add .",
+    "description": "Stage all changes",
+    "category" : "git"
+  },
+  {
+    "id": 28,
+    "name": "Commit Changes",
+    "command": "git commit -m \"message\"",
+    "description": "Create commit",
+    "category": "git"
+  },
+  {
+    "id": 29,
+    "name": "Push Changes",
+    "command": "git push",
+    "description": "Push to remote repository",
+    "category": "git"
+  },
+  {
+    "id": 30,
+    "name": "Pull Changes",
+    "command": "git pull",
+    "description": "Pull latest changes",
+    "category": "git"
+  },
+  {
+    "id": 31,
+    "name": "Git Log",
+    "command": "git log --oneline",
+    "description": "Commpact commit history",
+    "category": "git"
+  },
+  {
+    "id": 32,
+    "name": "Show Branches",
+    "command": "git branch",
+    "description": "List local branches",
+    "category": "git"
+  },
+  {
+    "id": 33,
+    "name": "Create Branch",
+    "command": "git checkout -b feature-name",
+    "description": "Create and switch branch",
+    "category": "git"
+  },
+  {
+    "id": 34,
+    "name": "Switch Branch",
+    "command": "git checkout main",
+    "description": "Switch branch",
+    "category": "git"
+  },
+  {
+    "id": 35,
+    "name": "Fetch Remote",
+    "command": "git fetch",
+    "description": "Download remote updates",
+    "category": "git"
   }
 ]
