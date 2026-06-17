@@ -213,7 +213,7 @@
     "id": 31,
     "name": "Git Log",
     "command": "git log --oneline",
-    "description": "Commpact commit history",
+    "description": "Compact commit history",
     "category": "git"
   },
   {
@@ -243,5 +243,40 @@
     "command": "git fetch",
     "description": "Download remote updates",
     "category": "git"
+  },
+  {
+      "id": 36,
+      "name": "Find Large Files",
+      "command": "find / -type f size +100M 2>/dev/null",
+      "description": "Find files larger than 100 MB",
+      "category": "debian"
+  },
+  {
+      "id": 37,
+      "name": "Show Running Processes",
+      "command": "ps aux",
+      "description": "List all runnning procesess",
+      "category": "debian"
+  },
+  {
+      "id": 38,
+      "name": "Show Current User",
+      "command": "whoami",
+      "description": "Display current username",
+      "category":"debian"
+  },
+  {
+      "id": 39,
+      "name": "Test DNS Resolution",
+      "command": "dig google.com",
+      "description": "Query DNS records",
+      "category": "networking"
+  },
+  {
+      "id": 40,
+      "name": "Show Git Remote",
+      "command": "git remote -v",
+      "description": "Display configured remotes",
+      "category": "git"
   }
 ]
