@@ -348,5 +348,40 @@
     "command": "$mod+Down",
     "description": "Focus window below",
     "category": "i3wm"
+  },
+  {
+    "id": 51,
+    "name": "Find Files",
+    "command": "find . -name \"*.txt\"",
+    "description": "Find files by name",
+    "category": "debian"
+  },
+  {
+    "id": 52,
+    "name": "Search Text",
+    "command": "grep -rn \"keyword\" .",
+    "description": "Search text recursively",
+    "category": "debian"
+  },
+  {
+    "id": 53,
+    "name": "Create Archive",
+    "command": "tar -czf archive.tar.gz folder/",
+    "description": "Compress directory to tar.gz",
+    "category": "debian"
+  },
+  {
+    "id": 54,
+    "name": "Extract Archive",
+    "command": "tar -xzf archive.tar.gz",
+    "description": "Extract tar.gz archive",
+    "category": "debian"
+  },
+  {
+    "id": 55,
+    "name": "Copy Directory",
+    "command": "cp -r source/ destination/",
+    "description": "Copy directory recursively",
+    "category": "debian"
   }
 ]
