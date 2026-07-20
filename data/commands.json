@@ -698,5 +698,75 @@
     "command": "$mod+Shift+e",
     "description": "Exit the i3 window manager",
     "category": "i3wm"
+  },
+  {
+    "id": 101,
+    "name": "Show Hostname",
+    "command": "hostnamectl",
+    "description": "Display hostname and OS info",
+    "category": "debian"
+  },
+  {
+    "id": 102,
+    "name": "Set Hostname",
+    "command": "sudo hostnamectl set-username newname",
+    "description": "Change system hostname",
+    "category": "debian"
+  },
+  {
+    "id": 103,
+    "name": "Show Uptime",
+    "command": "uptime -p",
+    "description": "Show how long system has been running",
+    "category": "debian"
+  },
+  {
+    "id": 104,
+    "name": "List Installed Packages",
+    "command": "dpkg -l",
+    "description": "List all installed packages",
+    "category": "debian"
+  },
+  {
+    "id": 105,
+    "name": "Remove Package",
+    "command": "sudo apt remove package",
+    "description": "Remove an installed package",
+    "category": "debian"
+  },
+  {
+    "id": 106,
+    "name": "Purge Package",
+    "command": "sudo apt purge package",
+    "description": "Remove package including config files",
+    "category": "debian"
+  },
+  {
+    "id": 107,
+    "name": "Clean Package Cache",
+    "command": "sudo apt clean",
+    "description": "Remove cached package files",
+    "category": "debian"
+  },
+  {
+    "id": 108,
+    "name": "Show Package Info",
+    "command": "apt show package",
+    "description": "Display package details",
+    "category": "debian"
+  },
+  {
+    "id": 109,
+    "name": "Search Package",
+    "command": "apt search keyword",
+    "description": "Search for packages by keyword",
+    "category": "debian"
+  },
+  {
+    "id": 110,
+    "name": "Create Symlink",
+    "command": "ln -s /path/to/target linkname",
+    "description": "Create a symbolic link",
+    "category": "debian"
   }
 ]
