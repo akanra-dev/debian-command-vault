@@ -558,5 +558,75 @@
     "command": "sudo umount /dev/sdb1",
     "description": "Unmount a filesystem",
     "category": "debian"
+  },
+  {
+    "id": 81,
+    "name": "Git Clone",
+    "command": "git clone <repository-url>",
+    "description": "Clone a remote repository",
+    "category": "git"
+  },
+  {
+    "id": 82,
+    "name": "Git Restore",
+    "command": "git restore .",
+    "description": "Restore modified files",
+    "category": "git"
+  },
+  {
+    "id": 83,
+    "name": "Git Diff",
+    "command": "git diff",
+    "description": "Show file differences",
+    "category": "git"
+  },
+  {
+    "id": 84,
+    "name": "Git Stash",
+    "command": "git stash",
+    "description": "Temporarily save uncommitted changes",
+    "category": "git"
+  },
+  {
+    "id": 85,
+    "name": "Git Stash Pop",
+    "command": "git stash pop",
+    "description": "Restore the latest stashed changes",
+    "category": "git"
+  },
+  {
+    "id": 86,
+    "name": "Git Cherry Pick",
+    "command": "git cherry-pick <commit>",
+    "description": "Apply a specific commit",
+    "category": "git"
+  },
+  {
+    "id": 87,
+    "name": "Git Rebase",
+    "command": "git rebase main",
+    "description": "Reapply commits on top of another branch",
+    "category": "git"
+  },
+  {
+    "id": 88,
+    "name": "Git Rebase Continue",
+    "command": "git rebase --continue",
+    "description": "Continue a paused rebase",
+    "category": "git"
+  },
+  {
+    "id": 89,
+    "name": "Git Reflog",
+    "command": "git reflog",
+    "description": "Show reference log",
+    "category": "git"
+  },
+  {
+    "id": 90,
+    "name": "Git Clean",
+    "command": "git clean -fd",
+    "description": "Remove untracked files and directories",
+    "category": "git"
   }
 ]
