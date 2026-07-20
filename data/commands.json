@@ -768,5 +768,75 @@
     "command": "ln -s /path/to/target linkname",
     "description": "Create a symbolic link",
     "category": "debian"
+  },
+  {
+    "id": 111,
+    "name": "Git Init Bare",
+    "command": "git init --bare",
+    "description": "Initialize a bare repository (for servers)",
+    "category": "git"
+  },
+  {
+    "id": 112,
+    "name": "Git Remote Add",
+    "command": "git remote add origin <url>",
+    "description": "Add a remote repository",
+    "category": "git"
+  },
+  {
+    "id": 113,
+    "name": "Git Push Upstream",
+    "command": "git push -u origin main",
+    "description": "Push and set upstream tracking branch",
+    "category": "git"
+  },
+  {
+    "id": 114,
+    "name": "Git Branch Delete",
+    "command": "git branch -d feature-name",
+    "description": "Delete a remote branch",
+    "category": "git"
+  },
+  {
+    "id": 115,
+    "name": "Git Branch Remote Delete",
+    "command": "git push origin --delete feature-name",
+    "description": "Delete a remote branch",
+    "category": "git"
+  },
+  {
+    "id": 116,
+    "name": "Git init",
+    "command": "git init",
+    "description": "Initialize a new git repository",
+    "category": "git"
+  },
+  {
+    "id": 117,
+    "name": "Git Merge",
+    "command": "git merge feature-name",
+    "description": "Merge a branch into current branch",
+    "category": "git"
+  },
+  {
+    "id": 118,
+    "name": "Git Reset Soft",
+    "command": "git reset --soft HEAD~1",
+    "description": "Undo last commit, keep changes staged",
+    "category": "git"
+  }.
+  {
+    "id": 119,
+    "name": "Git Reset Hard",
+    "command": "git reset --hard HEAD~1",
+    "description": "Undo last commit and discard changes",
+    "category": "git"
+  },
+  {
+    "id": 120,
+    "name": "Git Log Graph",
+    "command": "git log --oneline --graph --all",
+    "description": "Visual branch history graph",
+    "category": "git"
   }
 ]
