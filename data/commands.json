@@ -663,5 +663,40 @@
     "command": "git status --short",
     "description": "Show concise working tree status",
     "category": "git"
+  },
+  {
+    "id": "96",
+    "name": "Switch to Workspace 1",
+    "command": "$mod+1",
+    "description": "Switch to workspace 1",
+    "category": "i3wm"
+  },
+  {
+    "id": 97,
+    "name": "Move Window to Workspace 1",
+    "command": "$mod+Shift+1",
+    "description": "Move focused to workspace 1",
+    "category": "i3wm"
+  },
+  {
+    "id": 98,
+    "name": "Focus Parent",
+    "command": "$mod+a",
+    "description": "Focus the present container",
+    "category": "i3wm"
+  },
+  {
+    "id": 99,
+    "name": "Toggle Sticky",
+    "command": "sticky toggle",
+    "description": "Toggle sticky mode for the focused window",
+    "category": "i3wm"
+  },
+  {
+    "id": 100,
+    "name": "Exit i3",
+    "command": "$mod+Shift+e",
+    "description": "Exit the i3 window manager",
+    "category": "i3wm"
   }
 ]
