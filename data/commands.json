@@ -418,5 +418,40 @@
     "command": "pwd",
     "description": "Print current working directory",
     "category": "debian"
+  },
+  {
+    "id": 61,
+    "name": "System Status",
+    "command": "systemctl status",
+    "description": "Show system status",
+    "category": "debian"
+  },
+  {
+    "id": 62,
+    "name": "Restart Service",
+    "command": "sudo systemctl restart nginx",
+    "description": "Restart a service",
+    "category": "debian"
+  },
+  {
+    "id": 63,
+    "name": "Enable Service",
+    "command": "sudo systemctl enable nginx",
+    "description": "Enable service at boot",
+    "category": "debian"
+  },
+  {
+    "id": 64
+    "name": "Disable Service",
+    "command": "sudo systemctl disable nginx",
+    "description": "Disable service at boot",
+    "category": "debian"
+  },
+  {
+    "id": 65,
+    "name": "List Running Services",
+    "command": "systemctl list-units --type=service",
+    "description": "List active services",
+    "category": "debian"
   }
 ]
