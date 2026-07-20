@@ -247,7 +247,7 @@
   {
     "id": 36,
     "name": "Find Large Files",
-    "command": "find / -type f size +100M 2>/dev/null",
+    "command": "find / -type f -size +100M 2>/dev/null",
     "description": "Find files larger than 100 MB",
     "category": "debian"
   },
@@ -255,7 +255,7 @@
     "id": 37,
     "name": "Show Running Processes",
     "command": "ps aux",
-    "description": "List all runnning procesess",
+    "description": "List all running processes",
     "category": "debian"
   },
   {
@@ -526,16 +526,16 @@
   },
   {
     "id": 76,
-    "name": "Disk Usage",
-    "command": "du -sh",
-    "description": "Show directory sizes",
-    "category": "debian"
+    "name": "ss",
+    "command": "ss -tulpan",
+    "description": "Socket statistics and fast netstat",
+    "category": "networking"
   },
   {
     "id": 77,
     "name": "Show Login Sessions",
     "command": "loginctl list-sessions",
-    "description": "List advice user sessions",
+    "description": "List active user sessions",
     "category": "debian"
   },
   {
@@ -665,7 +665,7 @@
     "category": "git"
   },
   {
-    "id": "96",
+    "id": 96,
     "name": "Switch to Workspace 1",
     "command": "$mod+1",
     "description": "Switch to workspace 1",
