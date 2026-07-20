@@ -488,5 +488,40 @@
     "command": "journalctl -u ssh",
     "description": "Show SSH service logs",
     "category": "debian"
+  },
+  {
+    "id": 71,
+    "name": "Kill Process",
+    "command": "kill PID",
+    "description": "Terminate a process",
+    "category": "debian"
+  },
+  {
+    "id": 72,
+    "name": "Force Kill Process",
+    "command": "kill -9 PID",
+    "description": "Force terminate a process",
+    "category": "debian"
+  },
+  {
+    "id": 73,
+    "name": "Find Process",
+    "command": "pgrep firefox",
+    "description": "Find process ID by name",
+    "category": "debian"
+  },
+  {
+    "id": 74,
+    "name": "Show Top Processes",
+    "command": "top",
+    "description": "Display running processes",
+    "category": "debian"
+  },
+  {
+    "id": 75,
+    "name": "Interactive Process Viewer",
+    "command": "htop",
+    "description": "Interactive process monitor",
+    "category": "debian"
   }
 ]
