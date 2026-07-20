@@ -523,5 +523,40 @@
     "command": "htop",
     "description": "Interactive process monitor",
     "category": "debian"
+  },
+  {
+    "id": 76,
+    "name": "Disk Usage",
+    "command": "du -sh",
+    "description": "Show directory sizes",
+    "category": "debian"
+  },
+  {
+    "id": 77,
+    "name": "Filesystem Usage",
+    "command": "df -h",
+    "description": "Show filesystem usage",
+    "category": "debian"
+  },
+  {
+    "id": 78,
+    "name": "List Block Devices",
+    "command": "lsblk",
+    "description": "List storage devices",
+    "category": "debian"
+  },
+  {
+    "id": 79,
+    "name": "Mount Filesystems",
+    "command": "mount",
+    "description": "Display mounted files",
+    "category": "debian"
+  },
+  {
+    "id": 80,
+    "name": "Unmount Filesystems",
+    "command": "sudo umount /dev/sdb1",
+    "description": "Unmount a filesystem",
+    "category": "debian"
   }
 ]
