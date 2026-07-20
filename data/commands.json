@@ -541,7 +541,7 @@
   {
     "id": 78,
     "name": "List Block Devices",
-    "command": "lsblk",
+    "command": "lsblk -o NAME,SIZE,TYPE,MOUNTPOINT",
     "description": "List storage devices",
     "category": "debian"
   },
