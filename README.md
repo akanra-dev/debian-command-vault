@@ -50,7 +50,7 @@ Current Progress: 70-80%
 
 Remaining Tasks: Add Command, Delete Command, Category Badge and Command Counter
 
-Current Command Database: 65 / 150 Commands
+Current Command Database: 75 / 150 Commands
 
 New commands are added regularly during development.
 
