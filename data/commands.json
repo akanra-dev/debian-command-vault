@@ -441,7 +441,7 @@
     "category": "debian"
   },
   {
-    "id": 64
+    "id": 64,
     "name": "Disable Service",
     "command": "sudo systemctl disable nginx",
     "description": "Disable service at boot",
@@ -452,6 +452,41 @@
     "name": "List Running Services",
     "command": "systemctl list-units --type=service",
     "description": "List active services",
+    "category": "debian"
+  },
+  {
+    "id": 66,
+    "name": "View System Logs",
+    "command": "journalctl",
+    "description": "Display system logs",
+    "category": "debian"
+  },
+  {
+    "id": 67,
+    "name": "Latest Boot Logs",
+    "command": "journalctl -b",
+    "description": "Show logs from current boot",
+    "category": "debian"
+  },
+  {
+    "id": 68,
+    "name": "Follow Logs",
+    "command": "journalctl -f",
+    "description": "Follow logs in real time",
+    "category": "debian"
+  },
+  {
+    "id": 69,
+    "name": "Kernel Logs",
+    "command": "journalctl -k",
+    "description": "Show kernel logs",
+    "category": "debian"
+  },
+  {
+    "id": 70,
+    "name": "SSH Service Logs",
+    "command": "journalctl -u ssh",
+    "description": "Show SSH service logs",
     "category": "debian"
   }
 ]
