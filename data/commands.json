@@ -1,5 +1,4 @@
-[
-  {
+[ {
     "id": 1,
     "name": "Check Disk Usage",
     "command": "df -h",
@@ -838,5 +837,75 @@
     "command": "git log --oneline --graph --all",
     "description": "Visual branch history graph",
     "category": "git"
+  },
+  {
+    "id": 121,
+    "name": "Show Network Interfaces",
+    "command": "ip link show",
+    "description": "List all network interfaces",
+    "category": "networking"
+  },
+  {
+    "id": 122,
+    "name": "Flush DNS Cache",
+    "command": "sudo systemd-resolve --flush-caches",
+    "description": "Clear lokal DNS cache",
+    "category": "networking"
+  },
+  {
+    "id": 123,
+    "name": "Test Port Connection",
+    "command": "nc -zv host 80",
+    "description": "Check if a port is open on a host",
+    "category": "networking"
+  },
+  {
+    "id": 124,
+    "name": "Download File",
+    "command": "wget -O output.file https://url",
+    "description": "Download file and save with custom name",
+    "category": "networking"
+  },
+  {
+    "id": 125,
+    "name": "Show Bandwidth Usage",
+    "command": "nethogs",
+    "description": "Monitor bandwidth per process",
+    "category": "networking"
+  },
+  {
+    "id": 126,
+    "name": "Scan Network Hosts",
+    "command": "nmap -sn 192.168.1.0/24",
+    "description": "Ping scan all hosts in subnet",
+    "category": "networking"
+  },
+  {
+    "id": 127,
+    "name": "Show Socket Statistics",
+    "command": "ss -s",
+    "description": "Display socket summary statistics",
+    "category": "networking"
+  },
+  {
+    "id": 128,
+    "name": "Add DNS Server",
+    "command": "echo nameserver 1.1.1.1' | sudo tee /etc/resolv.conf",
+    "description": "Set DNS server to Cloudflare",
+    "category": "networking"
+  },
+  {
+    "id": 129,
+    "name": "Capture Network Packets",
+    "command": "sudo tcpdump-i eth0 -n",
+    "description": "Capture packets on interface eth0",
+    "category": "networking"
+  },
+  {
+    "id": 130,
+    "name": "HTTP Request with Headers",
+    "command": "curl -l https://example.com",
+    "description": "Fetch HTTP response headers only",
+    "category": "networking"
   }
 ]
