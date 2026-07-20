@@ -245,38 +245,73 @@
     "category": "git"
   },
   {
-      "id": 36,
-      "name": "Find Large Files",
-      "command": "find / -type f size +100M 2>/dev/null",
-      "description": "Find files larger than 100 MB",
-      "category": "debian"
+    "id": 36,
+    "name": "Find Large Files",
+    "command": "find / -type f size +100M 2>/dev/null",
+    "description": "Find files larger than 100 MB",
+    "category": "debian"
   },
   {
-      "id": 37,
-      "name": "Show Running Processes",
-      "command": "ps aux",
-      "description": "List all runnning procesess",
-      "category": "debian"
+    "id": 37,
+    "name": "Show Running Processes",
+    "command": "ps aux",
+    "description": "List all runnning procesess",
+    "category": "debian"
   },
   {
-      "id": 38,
-      "name": "Show Current User",
-      "command": "whoami",
-      "description": "Display current username",
-      "category":"debian"
+    "id": 38,
+    "name": "Show Current User",
+    "command": "whoami",
+    "description": "Display current username",
+    "category":"debian"
   },
   {
-      "id": 39,
-      "name": "Test DNS Resolution",
-      "command": "dig google.com",
-      "description": "Query DNS records",
-      "category": "networking"
+    "id": 39,
+    "name": "Test DNS Resolution",
+    "command": "dig google.com",
+    "description": "Query DNS records",
+    "category": "networking"
   },
   {
-      "id": 40,
-      "name": "Show Git Remote",
-      "command": "git remote -v",
-      "description": "Display configured remotes",
-      "category": "git"
+    "id": 40,
+    "name": "Show Git Remote",
+    "command": "git remote -v",
+    "description": "Display configured remotes",
+    "category": "git"
+  },
+  {
+    "id": 41,
+    "name": "Show Listening Ports",
+    "command": "ss -lnt",
+    "description": "Show listening TCP ports",
+    "category": "networking"
+  },
+  {
+    "id": 42,
+    "name": "Check Public IP",
+    "command": "curl ifconfig.me",
+    "description": "Display public IP address",
+    "category": "networking"
+  },
+  {
+    "id": 43,
+    "name": "DNS Lookup",
+    "command": "nslookup google.com",
+    "description": "Query DNS records",
+    "category": "networking"
+  },
+  {
+    "id": 44,
+    "name": "Show ARP Table",
+    "command": "ip neigh",
+    "description": "Display neighbor table",
+    "category": "networking"
+  },
+  {
+    "id": 45,
+    "name": "Trace Network Route",
+    "command": "traceroute google.com",
+    "description": "Trace route to host",
+    "category": "networking"
   }
 ]
