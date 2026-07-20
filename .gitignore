@@ -1,0 +1,22 @@
+# binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# test binaries
+*.test
+
+# go coverage
+*.out
+
+# local env
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
