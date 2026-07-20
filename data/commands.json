@@ -1,4 +1,5 @@
-[ {
+[ 
+  {
     "id": 1,
     "name": "Check Disk Usage",
     "command": "df -h",
@@ -907,5 +908,75 @@
     "command": "curl -l https://example.com",
     "description": "Fetch HTTP response headers only",
     "category": "networking"
+  },
+  {
+    "id": 131,
+    "name": "Insert Mode at Line Start",
+    "command": "I",
+    "description": "Enter insert mode at begining of line",
+    "category": "vim"
+  },
+  {
+    "id": 132,
+    "name": "Insert Mode at Line End",
+    "command": "A",
+    "description": "Enter insert mode at end of line",
+    "category": "vim"
+  },
+  {
+    "id": 133,
+    "name": "Open Line Below",
+    "command": "o",
+    "description": "Insert new line below and enter insert mode",
+    "category": "vim"
+  },
+  {
+    "id": 134,
+    "name": "Open Line Above",
+    "command": "O",
+    "description": "Insert new line above and enter insert mode",
+    "category": "vim"
+  },
+  {
+    "id": 135,
+    "name": "Jump to Line Start",
+    "command": "0",
+    "description": "Move cursor to beginning of line",
+    "category": "vim"
+  },
+  {
+    "id": 136,
+    "name": "Jump to Line End",
+    "command": "$",
+    "description": "Move cursor to end of line",
+    "category": "vim"
+  },
+  {
+    "id": 137,
+    "name": "Search Forward",
+    "command": "/pattern",
+    "description": "Search for pattern going forward",
+    "category": "vim"
+  },
+  {
+    "id": 138,
+    "name": "Replace All in File",
+    "command": ":%s/old/new/g",
+    "description": "Replace all occurencies in file",
+    "category": "vim"
+  },
+  {
+    "id": 139,
+    "name": "Show Line Numbers",
+    "command": ":set number",
+    "description": "Enable line numbers",
+    "category": "vim"
+  },
+  {
+    "id": 140,
+    "name": "Undo",
+    "command": "u",
+    "description": "Undo last change",
+    "category": "vim"
   }
 ]
