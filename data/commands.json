@@ -533,9 +533,9 @@
   },
   {
     "id": 77,
-    "name": "Filesystem Usage",
-    "command": "df -h",
-    "description": "Show filesystem usage",
+    "name": "Show Login Sessions",
+    "command": "loginctl list-sessions",
+    "description": "List advice user sessions",
     "category": "debian"
   },
   {
