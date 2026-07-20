@@ -313,5 +313,40 @@
     "command": "traceroute google.com",
     "description": "Trace route to host",
     "category": "networking"
+  },
+  {
+    "id": 46,
+    "name": "Toggle Floating Mode",
+    "command": "$mod+Shift+Space",
+    "description": "Toggle floating window mode",
+    "category": "i3wm"
+  },
+  {
+    "id": 47,
+    "name": "Move Focus Left",
+    "command": "$mod+Left",
+    "description": "Focus window on the left",
+    "category": "i3wm"
+  },
+  {
+    "id": 48,
+    "name": "Move Focus Right",
+    "command": "$mod+right",
+    "description": "Focus window on the right",
+    "category": "i3wm"
+  },
+  {
+    "id": 49,
+    "name": "Move Focus Up",
+    "command": "$mod+Up",
+    "description": "Focus window above",
+    "category": "i3wm"
+  },
+  {
+    "id": 50,
+    "name": "Move Focus Down",
+    "command": "$mod+Down",
+    "description": "Focus window below",
+    "category": "i3wm"
   }
 ]
