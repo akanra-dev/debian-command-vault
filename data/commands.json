@@ -383,5 +383,40 @@
     "command": "cp -r source/ destination/",
     "description": "Copy directory recursively",
     "category": "debian"
+  },
+  {
+    "id": 56,
+    "name": "Change Permissions",
+    "command": "chmod +x script.sh",
+    "description": "Make file executable",
+    "category": "debian"
+  },
+  {
+    "id": 57,
+    "name": "Change Owner",
+    "command": "sudo chown user:user file",
+    "description": "Change file owner",
+    "category": "debian"
+  },
+  {
+    "id": 58,
+    "name": "Show File Permissions",
+    "command": "ls -l",
+    "description": "Display file permissions",
+    "category": "debian"
+  },
+  {
+    "id":59,
+    "name": "Change Group",
+    "command": "sudo chgrp group file",
+    "description": "Change file group",
+    "category": "debian"
+  },
+  {
+    "id": 60,
+    "name": "Show Current Directory",
+    "command": "pwd",
+    "description": "Print current working directory",
+    "category": "debian"
   }
 ]
