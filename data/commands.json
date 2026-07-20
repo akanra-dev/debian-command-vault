@@ -628,5 +628,40 @@
     "command": "git clean -fd",
     "description": "Remove untracked files and directories",
     "category": "git"
+  },
+  {
+    "id": 91,
+    "name": "Git Show",
+    "command": "git show HEAD",
+    "description": "Show details of the latest command",
+    "category": "git"
+  },
+  {
+    "id": 92,
+    "name": "Git Tag",
+    "command": "git tag",
+    "description": "List repository tags",
+    "category": "git"
+  },
+  {
+    "id": 93,
+    "name": "Git Blame",
+    "command": "git blame README.md",
+    "description": "Show who last modified each line",
+    "category": "git"
+  },
+  {
+    "id": 94,
+    "name": "Git Bisect",
+    "command": "git bisect start",
+    "description": "Start binary search to find the commit that introduced a bug",
+    "category": "git"
+  },
+  {
+    "id": 95,
+    "name": "Git Short Status",
+    "command": "git status --short",
+    "description": "Show concise working tree status",
+    "category": "git"
   }
 ]
