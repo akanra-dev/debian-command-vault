@@ -27,10 +27,10 @@ p {
 }
 
 .command-card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 10px;
-    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
 }
 
 .command-card h3 {
@@ -66,7 +66,6 @@ code {
     color: #7ee787;
 }
 
-.dark-mode .command-card {
-    background-color: #1a1a1a;
+.dark-mode .command-ca {
     border-color: #444;
 }

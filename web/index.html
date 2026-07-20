@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,10 @@
 
 <h1>Debian Command Vault</h1>
 
+<button id="theme-toggle">
+    🌙 Dark Mode
+</button>
+
 <p>
     Store and search useful Debian Commands.
 </p>
@@ -18,6 +22,15 @@
     type="text"
     placeholder="search commands..."
 >
+
+<select id="category-filter">
+    <option value="all">All Categories</option>
+    <option value="debian">Debian</option>
+    <option value="vim">Vim</option>
+    <option value="i3wm">i3WM</option>
+    <option value="networking">Networking</option>
+    <option value="git">Git</option>
+</select>
 
 <div class="container">
     <div id="commands"></div>
