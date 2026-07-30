@@ -978,5 +978,74 @@
     "command": "u",
     "description": "Undo last change",
     "category": "vim"
+  },
+  {
+    "id": 141,
+    "name": "Horizontal Split",
+    "command": "$mod+h",
+    "description": "Split container horizontally",
+    "category":" i3wm"
+  },
+  {
+    "id": 142,
+    "name": "Stacking Layout",
+    "command": "$mod+s",
+    "description": "Set stacking layout for container",
+    "category": "i3wm"
+  },
+  {
+    "id": 143,
+    "name": "Tabbed Layout",
+    "command": "$mod+w",
+    "description": "Set tabbed layout for container",
+    "category": "i3wm"
+  },
+  {
+    "id": 144,
+    "name": "Toggle Fullscreen",
+    "command": "$mod+f",
+    "description": "Toggle fullscreen for focused window",
+    "category":" i3wm"
+  },
+  {
+    "id": 145,
+    "name": "Focus Mode Toggle",
+    "command": "$mod+Space",
+    "description": "Toggle focus between tiling and floating",
+    "category": "i3wm"
+  },
+  {
+    "id": 146,
+    "name": "Resize Mode",
+    "command": "$mod+r",
+    "description": "Enter resize mode for windows",
+    "category": "i3wm"
+  },
+  {
+    "id": 147,
+    "name": "Move Window Left",
+    "command": "$mod+Shift+Left",
+    "description": "Move focused window to the left",
+    "category": "i3wm"
+  },
+  {
+    "id": 148,
+    "name": "Move Window Right",
+    "command": "$mod+Shift+Right",
+    "description": "Move focused window to the right",
+    "category": "i3wm"
+  },
+  {
+    "id": 149,
+    "name": "Move Window Up",
+    "command": "$mod+Shift+Up",
+    "description": "Move focused window upward",
+    "category": "i3wm"
+  },
+  {
+    "id": 150,
+    "name": "Move Window Down",
+    "command": "$mod+Shift+Down",
+    "description": "Move focused window downward",
+    "category": "i3wm"
   }
-]
