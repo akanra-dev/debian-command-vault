@@ -68,8 +68,19 @@ loadCommands();
 
 const themeButton = document.getElementById("theme-toggle");
 
+function setTheme(isDark) {
+    document.body.classList.toggle("dark-mode", isDark);
+    themeButton.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    setTheme(true);
+}
+
 themeButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+    setTheme(!document.body.classList.contains("dark-mode"));
 });
 
 const categoryFilter = document.getElementById("category-filter");

@@ -3,7 +3,7 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    line-height: 1,6;
+    line-height: 1.6;
 }
 
 h1 {
@@ -19,7 +19,7 @@ p {
 }
 
 #search {
-    width: 100px;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
@@ -69,4 +69,12 @@ code {
 .dark-mode .command-card {
     background-color: #1a1a1a;
     border-color: #444;
+}
+
+.dark-mode button,
+.dark-mode input,
+.dark-mode select {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid #444;
 }

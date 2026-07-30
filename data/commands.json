@@ -850,7 +850,7 @@
     "id": 122,
     "name": "Flush DNS Cache",
     "command": "sudo systemd-resolve --flush-caches",
-    "description": "Clear lokal DNS cache",
+    "description": "Clear local DNS cache",
     "category": "networking"
   },
   {
@@ -913,7 +913,7 @@
     "id": 131,
     "name": "Insert Mode at Line Start",
     "command": "I",
-    "description": "Enter insert mode at begining of line",
+    "description": "Enter insert mode at beginning of line",
     "category": "vim"
   },
   {
@@ -962,7 +962,7 @@
     "id": 138,
     "name": "Replace All in File",
     "command": ":%s/old/new/g",
-    "description": "Replace all occurencies in file",
+    "description": "Replace all occurrences in file",
     "category": "vim"
   },
   {
@@ -984,7 +984,7 @@
     "name": "Horizontal Split",
     "command": "$mod+h",
     "description": "Split container horizontally",
-    "category":" i3wm"
+    "category":"i3wm"
   },
   {
     "id": 142,
@@ -1005,7 +1005,7 @@
     "name": "Toggle Fullscreen",
     "command": "$mod+f",
     "description": "Toggle fullscreen for focused window",
-    "category":" i3wm"
+    "category":"i3wm"
   },
   {
     "id": 145,
@@ -1049,3 +1049,4 @@
     "description": "Move focused window downward",
     "category": "i3wm"
   }
+]
