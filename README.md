@@ -62,11 +62,15 @@ Completed: SQLite Database, Full REST API (CRUD), Docker Support, Auto-seed from
 
 Status: 100% Complete
 
-## Screenshots
+## Before & After
 
-![Home](1.png)
-![Categories-Option](2.png)
-![Dark Mode](3.png)
+| Before | After |
+|--------|-------|
+| ![Before](3.png) | ![After](finished-one.png) |
+
+## Demo
+
+<video src="demo.mp4" controls width="100%"></video>
 
 ## Installation
 
