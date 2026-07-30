@@ -70,7 +70,7 @@ Status: 100% Complete
 
 ## Demo
 
-<video src="demo.mp4" controls width="100%"></video>
+<video src="https://github.com/akanra-dev/debian-command-vault/raw/main/demo.mp4" controls width="100%"></video>
 
 ## Installation
 
