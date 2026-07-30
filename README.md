@@ -16,6 +16,10 @@ Current Features:
 - ✅ Copy Command Button
 - ✅ Responsive Card Layout
 - ✅ Lightweight Setup
+- ✅ Add Command
+- ✅ Delete Command
+- ✅ Category Badge
+- ✅ Command Counter
 
 ## Technology Stack
 
@@ -42,17 +46,11 @@ Completed: Go API, JSON Storage, HTML Frontend, CSS Cards, Search Commands, GitH
 
 Status: 100% Complete
 
-### Stage 2 — Feature Expansion 🚧
+### Stage 2 — Feature Expansion ✅
 
-Completed: Search, Category Filter, Dark Mode and Copy Button.
+Completed: Search, Category Filter, Dark Mode, Copy Button, Add Command, Delete Command, Category Badge and Command Counter.
 
-Current Progress: 70-80%
-
-Remaining Tasks: Add Command, Delete Command, Category Badge and Command Counter
-
-Current Command Database: 150 / 150 Commands
-
-New commands are added regularly during development.
+Status: 100% Complete
 
 ### Stage 3 — Future Plans 🧪
 
@@ -75,7 +73,7 @@ These features are experimental and may change.
 
 2. Run:
    ```bash
-   go run main.go
+   go run ./cmd/server/
    ```
 
 3. Open:

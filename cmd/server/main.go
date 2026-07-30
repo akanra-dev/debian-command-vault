@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-    http.HandleFunc("/api/commands", handlers.GetCommands)
+    http.HandleFunc("/api/commands", handlers.HandleCommands)
 
     fs := http.FileServer(http.Dir("./web"))
     http.Handle("/", fs)

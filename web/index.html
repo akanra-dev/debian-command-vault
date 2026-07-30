@@ -17,20 +17,44 @@
     Store and search useful Debian Commands.
 </p>
 
-<input
-    id="search"
-    type="text"
-    placeholder="search commands..."
->
+<div id="counter"></div>
 
-<select id="category-filter">
-    <option value="all">All Categories</option>
-    <option value="debian">Debian</option>
-    <option value="vim">Vim</option>
-    <option value="i3wm">i3WM</option>
-    <option value="networking">Networking</option>
-    <option value="git">Git</option>
-</select>
+<div class="toolbar">
+    <input
+        id="search"
+        type="text"
+        placeholder="search commands..."
+    >
+
+    <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="debian">Debian</option>
+        <option value="vim">Vim</option>
+        <option value="i3wm">i3WM</option>
+        <option value="networking">Networking</option>
+        <option value="git">Git</option>
+    </select>
+
+    <button id="show-add-form">+ Add Command</button>
+</div>
+
+<div id="add-form" class="add-form hidden">
+    <h3>Add New Command</h3>
+    <input id="add-name" type="text" placeholder="Name">
+    <input id="add-command" type="text" placeholder="Command">
+    <input id="add-desc" type="text" placeholder="Description">
+    <select id="add-category">
+        <option value="debian">Debian</option>
+        <option value="vim">Vim</option>
+        <option value="i3wm">i3WM</option>
+        <option value="networking">Networking</option>
+        <option value="git">Git</option>
+    </select>
+    <div class="add-form-actions">
+        <button id="save-command">Save</button>
+        <button id="cancel-add">Cancel</button>
+    </div>
+</div>
 
 <div class="container">
     <div id="commands"></div>

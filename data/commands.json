@@ -1,4 +1,4 @@
-[ 
+[
   {
     "id": 1,
     "name": "Check Disk Usage",
@@ -23,7 +23,7 @@
   {
     "id": 4,
     "name": "Save File",
-    "command" : ":w",
+    "command": ":w",
     "description": "Save current file",
     "category": "vim"
   },
@@ -120,7 +120,7 @@
   },
   {
     "id": 18,
-    "name":"Force Quit",
+    "name": "Force Quit",
     "command": ":q!",
     "description": "Exit without saving",
     "category": "vim"
@@ -186,7 +186,7 @@
     "name": "Add all files",
     "command": "git add .",
     "description": "Stage all changes",
-    "category" : "git"
+    "category": "git"
   },
   {
     "id": 28,
@@ -263,7 +263,7 @@
     "name": "Show Current User",
     "command": "whoami",
     "description": "Display current username",
-    "category":"debian"
+    "category": "debian"
   },
   {
     "id": 39,
@@ -406,7 +406,7 @@
     "category": "debian"
   },
   {
-    "id":59,
+    "id": 59,
     "name": "Change Group",
     "command": "sudo chgrp group file",
     "description": "Change file group",
@@ -984,7 +984,7 @@
     "name": "Horizontal Split",
     "command": "$mod+h",
     "description": "Split container horizontally",
-    "category":"i3wm"
+    "category": "i3wm"
   },
   {
     "id": 142,
@@ -1005,7 +1005,7 @@
     "name": "Toggle Fullscreen",
     "command": "$mod+f",
     "description": "Toggle fullscreen for focused window",
-    "category":"i3wm"
+    "category": "i3wm"
   },
   {
     "id": 145,

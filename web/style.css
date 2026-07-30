@@ -18,12 +18,86 @@ p {
     margin-top: 20px;
 }
 
+#counter {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
 #search {
-    width: 100%;
+    flex: 1;
+    min-width: 200px;
     padding: 10px;
     font-size: 16px;
-    margin-bottom: 20px;
     box-sizing: border-box;
+}
+
+#category-filter {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#show-add-form {
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+
+.add-form {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-form.hidden {
+    display: none;
+}
+
+.add-form input,
+.add-form select {
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.add-form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#save-command {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#cancel-add {
+    padding: 10px 20px;
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .command-card {
@@ -36,6 +110,9 @@ p {
 .command-card h3 {
     margin-top: 0;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .command-card p {
@@ -55,6 +132,33 @@ code {
     padding: 4px 8px;
     cursor: pointer;
 }
+
+.delete-btn {
+    margin-left: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.category-badge.debian  { background: #d70a53; }
+.category-badge.vim    { background: #019733; }
+.category-badge.i3wm   { background: #ff8c00; }
+.category-badge.networking { background: #007acc; }
+.category-badge.git    { background: #f05032; }
 
 .dark-mode {
     background-color: #121212;
@@ -77,4 +181,27 @@ code {
     background-color: #2d2d2d;
     color: #ffffff;
     border: 1px solid #444;
+}
+
+.dark-mode #show-add-form {
+    background: #28a745;
+    color: #fff;
+}
+
+.dark-mode #save-command {
+    background: #007bff;
+    color: #fff;
+}
+
+.dark-mode #cancel-add {
+    background: #6c757d;
+    color: #fff;
+}
+
+.dark-mode .add-form {
+    background: #1a1a1a;
+}
+
+.dark-mode #counter {
+    color: #aaa;
 }
