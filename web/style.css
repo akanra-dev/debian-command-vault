@@ -68,6 +68,12 @@ p {
     display: none;
 }
 
+.add-form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -4px;
+}
+
 .add-form input,
 .add-form select {
     padding: 10px;
@@ -153,12 +159,6 @@ code {
     color: #fff;
     text-transform: uppercase;
 }
-
-.category-badge.debian  { background: #d70a53; }
-.category-badge.vim    { background: #019733; }
-.category-badge.i3wm   { background: #ff8c00; }
-.category-badge.networking { background: #007acc; }
-.category-badge.git    { background: #f05032; }
 
 .dark-mode {
     background-color: #121212;

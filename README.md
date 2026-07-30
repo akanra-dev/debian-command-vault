@@ -2,41 +2,45 @@
 
 A lightweight Linux command reference built with Go, HTML, CSS, and JavaScript.
 
-The goal of this project is to provide a simple and searchable vault of useful Linux commands without requiring a database or complex setup.
+The goal of this project is to provide a simple and searchable vault of useful Linux commands.
 
 ## Features
 
-Current Features:
-
 - ✅ Go Backend
-- ✅ JSON Data Storage
+- ✅ SQLite Database (auto-seeded from JSON)
+- ✅ REST API (full CRUD)
 - ✅ Command Search
 - ✅ Category Filter
-- ✅ Dark Mode
+- ✅ Dark Mode (persisted)
 - ✅ Copy Command Button
-- ✅ Responsive Card Layout
-- ✅ Lightweight Setup
-- ✅ Add Command
-- ✅ Delete Command
-- ✅ Category Badge
+- ✅ Add / Delete Commands
+- ✅ Category Badges
 - ✅ Command Counter
+- ✅ Docker Support
+- ✅ Responsive Card Layout
 
 ## Technology Stack
 
 | Technology | Purpose |
 |------------|----------|
 | Go | Backend Server |
-| JSON | Data Storage |
+| SQLite | Database |
 | HTML | Frontend Structure |
 | CSS | Styling |
 | JavaScript | UI Interaction |
+| Docker | Containerization |
 | Git | Version Control |
 | GitHub | Repository Hosting |
 
-## Project Goals
+## REST API
 
-This project started as a personal Linux learning tool. Over time it evolved into a searchable command vault that can help:
-Linux beginners, Debian users, Open source enthusiasts and Developers who forget commands every week😆
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/commands` | List all commands |
+| GET | `/api/commands/{id}` | Get one command |
+| POST | `/api/commands` | Create a command |
+| PUT | `/api/commands/{id}` | Update a command |
+| DELETE | `/api/commands/{id}` | Delete a command |
 
 ## Development Progress
 
@@ -52,11 +56,11 @@ Completed: Search, Category Filter, Dark Mode, Copy Button, Add Command, Delete 
 
 Status: 100% Complete
 
-### Stage 3 — Future Plans 🧪
+### Stage 3 — Production Ready ✅
 
-Planned: SQLite Support, REST API and Docker Support
+Completed: SQLite Database, Full REST API (CRUD), Docker Support, Auto-seed from JSON.
 
-These features are experimental and may change.
+Status: 100% Complete
 
 ## Screenshots
 
@@ -66,26 +70,28 @@ These features are experimental and may change.
 
 ## Installation
 
-1. Clone repository:
-   ```bash
-   git clone https://github.com/USERNAME/debian-command-vault.git
-   ```
+### Local
 
-2. Run:
-   ```bash
-   go run ./cmd/server/
-   ```
+```bash
+git clone https://github.com/USERNAME/debian-command-vault.git
+cd debian-command-vault
+go run ./cmd/server/
+```
 
-3. Open:
-   ```
-   http://localhost:8080
-   ```
+Open http://localhost:8080
+
+### Docker
+
+```bash
+docker compose up --build
+```
+
+Open http://localhost:8080
 
 ## Why This Project Exists
 
-Many Linux users repeatedly search for the same commands, exactly:
-grep, find, tar, chmod, chown, systemctl and journalctl.
-This project aims to keep those commands organized in one place.
+Many Linux users repeatedly search for the same commands: grep, find, tar, chmod, chown, systemctl and journalctl.
+This project keeps those commands organized in one place.
 
 ## Contributing
 
@@ -101,15 +107,7 @@ Pull Requests are welcome.
 
 ## Learning Journey
 
-This project is also part of my journey learning:
-
-1. Go
-2. HTML
-3. CSS
-4. JavaScript
-5. Git
-6. GitHub
-7. Open Source Development
+This project is part of my journey learning Go, SQLite, REST APIs, HTML, CSS, JavaScript, Docker, Git, and Open Source Development.
 
 ## License
 

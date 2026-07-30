@@ -1,17 +1,25 @@
 package main
 
 import (
-    "log"
-    "net/http"
-    "vault/internal/handlers"
+	"log"
+	"net/http"
+
+	"vault/internal/database"
+	"vault/internal/handlers"
 )
 
 func main() {
-    http.HandleFunc("/api/commands", handlers.HandleCommands)
+	if err := database.Init("data/vault.db"); err != nil {
+		log.Fatal("database init:", err)
+	}
+	defer database.Close()
 
-    fs := http.FileServer(http.Dir("./web"))
-    http.Handle("/", fs)
+	http.HandleFunc("/api/commands", handlers.HandleCommands)
+	http.HandleFunc("/api/commands/", handlers.HandleCommandByID)
 
-    log.Println("Server running on :8080")
-    log.Fatal(http.ListenAndServe(":8080", nil))
+	fs := http.FileServer(http.Dir("./web"))
+	http.Handle("/", fs)
+
+	log.Println("Server running on :8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }

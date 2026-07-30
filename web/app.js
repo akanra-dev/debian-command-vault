@@ -1,5 +1,47 @@
 let commands = [];
 
+function getCategories() {
+    const cats = new Set(commands.map(c => c.category));
+    return [...cats].sort();
+}
+
+function fillCategorySelects() {
+    const cats = getCategories();
+    for (const id of ["category-filter", "add-category"]) {
+        const sel = document.getElementById(id);
+        const val = sel.value;
+        const isFilter = id === "category-filter";
+
+        sel.innerHTML = "";
+        if (isFilter) {
+            const all = document.createElement("option");
+            all.value = "all";
+            all.textContent = "All Categories";
+            sel.appendChild(all);
+        }
+
+        for (const c of cats) {
+            const opt = document.createElement("option");
+            opt.value = c;
+            opt.textContent = c.charAt(0).toUpperCase() + c.slice(1);
+            sel.appendChild(opt);
+        }
+
+        if (val && (isFilter || cats.includes(val))) {
+            sel.value = val;
+        }
+    }
+}
+
+function badgeColor(category) {
+    let hash = 0;
+    for (let i = 0; i < category.length; i++) {
+        hash = category.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const hue = Math.abs(hash) % 360;
+    return `hsl(${hue}, 55%, 45%)`;
+}
+
 function renderCommands(list) {
     const container = document.getElementById("commands");
     const counter = document.getElementById("counter");
@@ -13,14 +55,15 @@ function renderCommands(list) {
         div.className = "command-card";
 
         const badge = document.createElement("span");
-        badge.className = "category-badge " + cmd.category;
+        badge.className = "category-badge";
         badge.textContent = cmd.category;
+        badge.style.background = badgeColor(cmd.category);
 
         div.innerHTML = `
             <h3>${cmd.name}</h3>
             <code>${cmd.command}</code>
             <button class="copy-btn">Copy</button>
-            <button class="delete-btn" data-id="${cmd.id}">Delete</button>
+            <button class="delete-btn">Delete</button>
             <p>${cmd.description}</p>
         `;
 
@@ -41,7 +84,7 @@ function renderCommands(list) {
         deleteBtn.addEventListener("click", async () => {
             if (!confirm(`Delete "${cmd.name}"?`)) return;
 
-            const res = await fetch(`/api/commands?id=${cmd.id}`, { method: "DELETE" });
+            const res = await fetch(`/api/commands/${cmd.id}`, { method: "DELETE" });
 
             if (res.ok) {
                 commands = commands.filter(c => c.id !== cmd.id);
@@ -78,6 +121,7 @@ async function loadCommands() {
     try {
         const response = await fetch("/api/commands");
         commands = await response.json();
+        fillCategorySelects();
         applyFilters();
     } catch (error) {
         console.error(error);
@@ -109,6 +153,7 @@ themeButton.addEventListener("click", () => {
 // Add command form
 const addForm = document.getElementById("add-form");
 document.getElementById("show-add-form").addEventListener("click", () => {
+    fillCategorySelects();
     addForm.classList.toggle("hidden");
 });
 
@@ -116,14 +161,35 @@ document.getElementById("cancel-add").addEventListener("click", () => {
     addForm.classList.add("hidden");
 });
 
+document.getElementById("add-new-category").addEventListener("input", function () {
+    const select = document.getElementById("add-category");
+    if (this.value.trim()) {
+        select.disabled = true;
+        select.style.opacity = "0.5";
+    } else {
+        select.disabled = false;
+        select.style.opacity = "1";
+    }
+});
+
 document.getElementById("save-command").addEventListener("click", async () => {
     const name = document.getElementById("add-name").value.trim();
     const command = document.getElementById("add-command").value.trim();
     const description = document.getElementById("add-desc").value.trim();
-    const category = document.getElementById("add-category").value;
+    const newCat = document.getElementById("add-new-category").value.trim();
+    let category = document.getElementById("add-category").value;
+
+    if (newCat) {
+        category = newCat.toLowerCase().replace(/\s+/g, "-");
+    }
 
     if (!name || !command) {
         alert("Name and Command are required");
+        return;
+    }
+
+    if (!category) {
+        alert("Please select or type a category");
         return;
     }
 
@@ -136,11 +202,15 @@ document.getElementById("save-command").addEventListener("click", async () => {
     if (res.ok) {
         const newCmd = await res.json();
         commands.push(newCmd);
+        fillCategorySelects();
         applyFilters();
         addForm.classList.add("hidden");
         document.getElementById("add-name").value = "";
         document.getElementById("add-command").value = "";
         document.getElementById("add-desc").value = "";
+        document.getElementById("add-new-category").value = "";
+        document.getElementById("add-category").disabled = false;
+        document.getElementById("add-category").style.opacity = "1";
     } else {
         alert("Failed to add command");
     }
