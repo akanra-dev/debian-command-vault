@@ -1,57 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debian Command Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Debian Command Vault</h1>
-
-<button id="theme-toggle">
-    🌙 Dark Mode
-</button>
-
-<p>
-    Store and search useful Debian Commands.
-</p>
-
-<div id="counter"></div>
-
-<div class="toolbar">
-    <input
-        id="search"
-        type="text"
-        placeholder="search commands..."
-    >
-
-    <select id="category-filter">
-        <option value="all">All Categories</option>
-    </select>
-
-    <button id="show-add-form">+ Add Command</button>
-</div>
-
-<div id="add-form" class="add-form hidden">
-    <h3>Add New Command</h3>
-    <input id="add-name" type="text" placeholder="Name">
-    <input id="add-command" type="text" placeholder="Command">
-    <input id="add-desc" type="text" placeholder="Description">
-
-    <label>Category</label>
-    <select id="add-category"></select>
-    <input id="add-new-category" type="text" placeholder="Or type a new category name...">
-
-    <div class="add-form-actions">
-        <button id="save-command">Save</button>
-        <button id="cancel-add">Cancel</button>
+<header class="site-header">
+    <div class="header-glow"></div>
+    <div class="header-content">
+        <div class="brand">
+            <div class="brand-logo">🐧</div>
+            <div>
+                <h1>Debian Command Vault</h1>
+                <p class="tagline">Store and search useful Debian Commands</p>
+            </div>
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-label">Dark</span>
+        </button>
     </div>
-</div>
+</header>
 
-<div class="container">
-    <div id="commands"></div>
-</div>
+<main class="main-content">
+    <div id="counter" class="counter"></div>
+
+    <div class="toolbar">
+        <div class="search-wrap">
+            <span class="search-icon">⌕</span>
+            <input
+                id="search"
+                type="text"
+                placeholder="Search commands, flags, keywords..."
+            >
+            <span class="search-shortcut">/</span>
+        </div>
+
+        <div class="toolbar-actions">
+            <select id="category-filter" class="select-control">
+                <option value="all">All Categories</option>
+            </select>
+
+            <button id="show-add-form" class="btn btn-primary">
+                <span class="btn-plus">+</span> Add Command
+            </button>
+        </div>
+    </div>
+
+    <div id="add-form" class="add-form hidden">
+        <div class="form-head">
+            <h3>Add New Command</h3>
+            <button id="cancel-add" class="form-close" aria-label="Close">×</button>
+        </div>
+        <div class="form-grid">
+            <div class="form-field">
+                <label for="add-name">Name</label>
+                <input id="add-name" type="text" placeholder="e.g. Check Disk Usage">
+            </div>
+            <div class="form-field">
+                <label for="add-command">Command</label>
+                <input id="add-command" type="text" placeholder="e.g. df -h" class="mono-input">
+            </div>
+            <div class="form-field">
+                <label for="add-desc">Description</label>
+                <input id="add-desc" type="text" placeholder="What does it do?">
+            </div>
+            <div class="form-field">
+                <label for="add-category">Category</label>
+                <select id="add-category" class="select-control"></select>
+                <input id="add-new-category" type="text" placeholder="Or type a new category..." class="new-cat-input">
+            </div>
+        </div>
+        <div class="form-actions">
+            <button id="save-command" class="btn btn-success">Save Command</button>
+        </div>
+    </div>
+
+    <div id="commands" class="commands-grid"></div>
+</main>
+
+<footer class="site-footer">
+    <p>Built with 🐧 on Debian — <span class="footer-highlight">Go + SQLite + Docker</span></p>
+</footer>
 
 <script src="app.js"></script>
 

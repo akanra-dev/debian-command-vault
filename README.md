@@ -62,11 +62,9 @@ Completed: SQLite Database, Full REST API (CRUD), Docker Support, Auto-seed from
 
 Status: 100% Complete
 
-## Before & After
+## Screenshot
 
-| Before | After |
-|--------|-------|
-| ![Before](3.png) | ![After](finished-one.png) |
+![Debian Command Vault](vault.jpg)
 
 ## Installation
 

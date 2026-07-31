@@ -46,9 +46,21 @@ function renderCommands(list) {
     const container = document.getElementById("commands");
     const counter = document.getElementById("counter");
 
-    counter.textContent = `Showing ${list.length} of ${commands.length} commands`;
+    counter.innerHTML = `Showing <b>${list.length}</b> of <b>${commands.length}</b> commands`;
 
     container.innerHTML = "";
+
+    if (list.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.innerHTML = `
+            <div class="empty-icon">🐧</div>
+            <p>No commands found</p>
+            <p>Try a different search or category.</p>
+        `;
+        container.appendChild(empty);
+        return;
+    }
 
     list.forEach(cmd => {
         const div = document.createElement("div");
@@ -60,11 +72,15 @@ function renderCommands(list) {
         badge.style.background = badgeColor(cmd.category);
 
         div.innerHTML = `
-            <h3>${cmd.name}</h3>
+            <h3>
+                ${cmd.name}
+                <span class="card-actions">
+                    <button class="copy-btn">Copy</button>
+                    <button class="delete-btn">Delete</button>
+                </span>
+            </h3>
             <code>${cmd.command}</code>
-            <button class="copy-btn">Copy</button>
-            <button class="delete-btn">Delete</button>
-            <p>${cmd.description}</p>
+            <p class="command-desc">${cmd.description}</p>
         `;
 
         div.querySelector("h3").prepend(badge);
@@ -75,9 +91,11 @@ function renderCommands(list) {
         copyBtn.addEventListener("click", async () => {
             await navigator.clipboard.writeText(cmd.command);
             copyBtn.textContent = "Copied!";
+            copyBtn.classList.add("copied");
             setTimeout(() => {
                 copyBtn.textContent = "Copy";
-            }, 1000);
+                copyBtn.classList.remove("copied");
+            }, 1200);
         });
 
         const deleteBtn = div.querySelector(".delete-btn");
@@ -88,6 +106,7 @@ function renderCommands(list) {
 
             if (res.ok) {
                 commands = commands.filter(c => c.id !== cmd.id);
+                fillCategorySelects();
                 applyFilters();
             } else {
                 alert("Failed to delete command");
@@ -128,22 +147,38 @@ async function loadCommands() {
     }
 }
 
-document.getElementById("search").addEventListener("input", applyFilters);
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", applyFilters);
 
 document.getElementById("category-filter").addEventListener("change", applyFilters);
 
+document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+    }
+    if (e.key === "Escape" && document.activeElement === searchInput) {
+        searchInput.blur();
+    }
+});
+
 // Theme toggle
 const themeButton = document.getElementById("theme-toggle");
+const themeIcon = themeButton.querySelector(".theme-icon");
+const themeLabel = themeButton.querySelector(".theme-label");
 
 function setTheme(isDark) {
     document.body.classList.toggle("dark-mode", isDark);
-    themeButton.textContent = isDark ? "\u2600\uFE0F Light Mode" : "\uD83C\uDF19 Dark Mode";
+    themeIcon.textContent = isDark ? "☀️" : "🌙";
+    themeLabel.textContent = isDark ? "Light" : "Dark";
     localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
     setTheme(true);
+} else if (savedTheme === "light") {
+    setTheme(false);
 }
 
 themeButton.addEventListener("click", () => {
