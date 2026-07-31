@@ -73,7 +73,7 @@ func seedIfEmpty() error {
 
 	for _, c := range commands {
 		if _, err := stmt.Exec(c.ID, c.Name, c.Command, c.Description, c.Category); err != nil {
-			tx.Rollback()
+			_ = tx.Rollback()
 			return err
 		}
 	}
