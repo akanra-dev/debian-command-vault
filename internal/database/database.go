@@ -43,7 +43,9 @@ func migrate() error {
 
 func seedIfEmpty() error {
 	var count int
-	db.QueryRow("SELECT COUNT(*) FROM commands").Scan(&count)
+	if err := db.QueryRow("SELECT COUNT(*) FROM commands").Scan(&count); err != nil {
+		return err
+	}
 	if count > 0 {
 		return nil
 	}
@@ -70,7 +72,10 @@ func seedIfEmpty() error {
 	defer stmt.Close()
 
 	for _, c := range commands {
-		stmt.Exec(c.ID, c.Name, c.Command, c.Description, c.Category)
+		if _, err := stmt.Exec(c.ID, c.Name, c.Command, c.Description, c.Category); err != nil {
+			tx.Rollback()
+			return err
+		}
 	}
 
 	return tx.Commit()

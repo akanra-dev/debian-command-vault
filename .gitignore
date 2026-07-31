@@ -14,6 +14,10 @@
 # local env
 .env
 
+# runtime database (auto-seeded)
+data/*.db
+data/*.db-*
+
 # IDE
 .vscode/
 .idea/
