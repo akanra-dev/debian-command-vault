@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: debian-command-vault
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/commands
+    envVars:
+      - key: PORT
+        value: 8080
