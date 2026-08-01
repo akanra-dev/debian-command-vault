@@ -71,7 +71,7 @@ Status: 100% Complete
 ### Local
 
 ```bash
-git clone https://github.com/USERNAME/debian-command-vault.git
+git clone https://github.com/akanra-dev/debian-command-vault.git
 cd debian-command-vault
 go run ./cmd/server/
 ```
