@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://debian-command-vault.onrender.com/sitemap.xml
