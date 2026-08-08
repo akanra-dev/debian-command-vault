@@ -1048,5 +1048,75 @@
     "command": "$mod+Shift+Down",
     "description": "Move focused window downward",
     "category": "i3wm"
+  },
+  {
+    "id": 151,
+    "name": "Run New Container",
+    "command": "docker run -d --name myapp -p 8080:80 nginx",
+    "description": "Run a new container from image in background",
+    "category": "docker"
+  },
+  {
+    "id": 152,
+    "name": "Show All Container",
+    "command": "docker ps -a",
+    "description": "Show all running and stopped containers",
+    "category": "docker"
+  },
+  {
+    "id": 153,
+    "name": "Stop Container",
+    "command": "docker stop myapp",
+    "description": "Stop a running container",
+    "category": "docker"
+  },
+  {
+    "id": 154,
+    "name": "Remove Container",
+    "command": "docker rm -f myapp",
+    "description": "Force remove a running container",
+    "category": "docker"
+  },
+  {
+    "id": 155,
+    "name": "Stream Container Logs",
+    "command": "docker logs -f --tail=100 myapp",
+    "description": "Show container logs in real time with the last 100 lines",
+    "category": "docker"
+  },
+  {
+    "id": 156,
+    "name": "Login Container",
+    "command": "docker exec -it myapp bash",
+    "description": "Open an interactive shell inside a running container",
+    "category": "docker"
+  },
+  {
+    "id": 157,
+    "name": "Show Container Config",
+    "command": "docker inspect myapp",
+    "description": "Show container configuration in full detail",
+    "category": "docker"
+  },
+  {
+    "id": 158,
+    "name": "CPU, Memory and Network",
+    "command": "docker stats --no-stream",
+    "description": "Show CPU, memory and network usage for all containers",
+    "category": "docker"
+  },
+  {
+    "id": 159,
+    "name": "Download Image",
+    "command": "docker pull ubuntu:22.04",
+    "description": "Download an image from Docker Hub into your local machine",
+    "category": "docker"
+  },
+  {
+    "id": 160,
+    "name": "List All Docker Images",
+    "command": "docker images -a",
+    "description": "Show all Docker images saved on your local machine",
+    "category": "docker"
   }
 ]
