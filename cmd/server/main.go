@@ -12,7 +12,7 @@ func main() {
 	if err := database.Init("data/vault.db"); err != nil {
 		log.Fatal("database init:", err)
 	}
-	defer database.Close()
+	defer func() { _ = database.Close() }()
 
 	http.HandleFunc("/api/commands", handlers.HandleCommands)
 	http.HandleFunc("/api/commands/", handlers.HandleCommandByID)
