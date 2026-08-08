@@ -69,7 +69,7 @@ func seedIfEmpty() error {
 	if err != nil {
 		return err
 	}
-	defer stmt.Close()
+	defer func() { _ = stmt.Close() }()
 
 	for _, c := range commands {
 		if _, err := stmt.Exec(c.ID, c.Name, c.Command, c.Description, c.Category); err != nil {
@@ -86,7 +86,7 @@ func List() ([]models.Command, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer rows.Close()
+	defer func() { _ = rows.Close() }()
 
 	var commands []models.Command
 	for rows.Next() {
