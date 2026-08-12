@@ -33,7 +33,14 @@ function fillCategorySelects() {
     }
 }
 
+const BRAND_COLORS = {
+    "docker": "#2496ED",
+};
+
 function badgeColor(category) {
+    if (BRAND_COLORS[category]) {
+        return BRAND_COLORS[category];
+    }
     let hash = 0;
     for (let i = 0; i < category.length; i++) {
         hash = category.charCodeAt(i) + ((hash << 5) - hash);
