@@ -1118,5 +1118,40 @@
     "command": "docker images -a",
     "description": "Show all Docker images saved on your local machine",
     "category": "docker"
+  },
+  {
+    "id": 161,
+    "name": "Remove Local Image",
+    "command": "docker rmi -f myapp:latest",
+    "description": "Force remove a local image even if it is in use",
+    "category": "docker"
+  },
+  {
+    "id": 162,
+    "name": "Create New Network",
+    "command": "docker network create mynet",
+    "description": "Create a new Docker network so containers can communicate",
+    "category": "docker"
+  },
+  {
+    "id": 163,
+    "name": "Show All Docker Network",
+    "command": "docker network ls",
+    "description": "Show all Docker networks on the system",
+    "category": "docker"
+  },
+  {
+    "id": 164,
+    "name": "Create Persistent Volume",
+    "command": "docker volume create mydata",
+    "description": "Create a persistent volume so container data survives restarts",
+    "category": "docker"
+  },
+  {
+    "id": 165,
+    "name": "Run All Service",
+    "command": "docker-compose up --build",
+    "description": "Run all services from docker-compose.yml and rebuild the images",
+    "category": "docker"
   }
 ]
