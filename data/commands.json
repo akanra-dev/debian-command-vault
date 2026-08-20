@@ -1153,5 +1153,40 @@
     "command": "docker-compose up --build",
     "description": "Run all services from docker-compose.yml and rebuild the images",
     "category": "docker"
+  },
+  {
+    "id": 166,
+    "name": "Create File Database",
+    "command": "sqlite3 database.db",
+    "description": "Create Database file with new SQLite via CLI",
+    "category": "sqlite"
+  },
+  {
+    "id": 167,
+    "name": "Open Another Database",
+    "command": ".open /path/to/database.db",
+    "description": "Open another database SQLite file without close from this session",
+    "category": "sqlite"
+  },
+  {
+    "id": 168,
+    "name": "Show List Database",
+    "command": ".databases",
+    "description": "Show up database listed when it's open in active session",
+    "category": "sqlite"
+  },
+  {
+    "id": 169,
+    "name": "Export All Database",
+    "command": ".dump > backup.sql",
+    "description": "Export all database to file SQL for backup data",
+    "category": "sqlite"
+  },
+  {
+    "id": 170,
+    "name": "Show Table Names",
+    "command": ".tables",
+    "description": "Show all table names that contains in the current data base",
+    "category": "sqlite"
   }
 ]
